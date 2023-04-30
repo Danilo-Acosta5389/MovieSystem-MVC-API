@@ -2,8 +2,10 @@
 {
     public class Person
     {
-        public int Id { get; set; }
-        public string? Name { get; set; }
-        public string? E_Mail { get; set; }
+        public int PersonId { get; set; }
+
+        public string Name { get; set; }
+
+        public string E_Mail { get; set; }
     }
 }

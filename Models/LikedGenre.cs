@@ -2,8 +2,10 @@
 {
     public class LikedGenre
     {
-        public int Id { get; set; }
-        public int GenreId { get; set; }
-        public int PersonId { get; set; }
+        public int LikedGenreId { get; set; }
+
+        public Genre Genre { get; set; }
+
+        public Person Person { get; set; }
     }
 }
