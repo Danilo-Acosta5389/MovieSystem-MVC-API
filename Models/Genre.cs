@@ -1,8 +1,10 @@
-﻿namespace MovieSystem_MVC_API.Models
+﻿using MovieSystem_MVC_API.Data;
+
+namespace MovieSystem_MVC_API.Models
 {
-    public class Genre
+    public class Genre : IEntity
     {
-        public int GenreId { get; set; }
+        public int Id { get; set; }
 
         public string Name { get; set; }
 
