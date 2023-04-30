@@ -1,8 +1,10 @@
-﻿namespace MovieSystem_MVC_API.Models
+﻿using MovieSystem_MVC_API.Data;
+
+namespace MovieSystem_MVC_API.Models
 {
-    public class Person
+    public class Person : IEntity
     {
-        public int PersonId { get; set; }
+        public int Id { get; set; }
 
         public string Name { get; set; }
 
