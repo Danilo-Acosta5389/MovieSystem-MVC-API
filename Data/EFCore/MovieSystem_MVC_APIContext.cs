@@ -15,5 +15,6 @@ namespace MovieSystem_MVC_API.Data.EFCore
         }
 
         public DbSet<Person> Person { get; set; } = default!;
+        public DbSet<Genre> Genre { get; set; } = default!;
     }
 }
