@@ -16,6 +16,7 @@ namespace MovieSystem_MVC_API
             builder.Services.AddScoped<EfCoreGenreRepository>();
             builder.Services.AddScoped<EfCoreMovieRepository>();
             builder.Services.AddScoped<EfCoreLikedGenreRepository>();
+            builder.Services.AddScoped<EfCorePersonMovieRepository>();
             builder.Services.AddControllers();
             // Learn more about configuring Swagger/OpenAPI at https://aka.ms/aspnetcore/swashbuckle
             builder.Services.AddEndpointsApiExplorer();
