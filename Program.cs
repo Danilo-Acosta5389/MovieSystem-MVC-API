@@ -1,6 +1,8 @@
 using Microsoft.EntityFrameworkCore;
 using Microsoft.Extensions.DependencyInjection;
 using MovieSystem_MVC_API.Data.EFCore;
+using System.Net.Http.Headers;
+
 namespace MovieSystem_MVC_API
 {
     public class Program
@@ -23,6 +25,8 @@ namespace MovieSystem_MVC_API
             builder.Services.AddSwaggerGen();
 
             var app = builder.Build();
+
+
 
             // Configure the HTTP request pipeline.
             if (app.Environment.IsDevelopment())
