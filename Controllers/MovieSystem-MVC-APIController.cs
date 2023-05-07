@@ -28,32 +28,32 @@ namespace MovieSystem_MVC_API.Controllers
         [HttpGet("{id}")]
         public async Task<ActionResult<TEntity>> Get(int id)
         {
-            var person = await repository.Get(id);
-            if (person == null)
+            var entity = await repository.Get(id);
+            if (entity == null)
             {
                 return NotFound();
             }
-            return person;
+            return entity;
         }
 
         // PUT: api/[controller]/5
         [HttpPut("{id}")]
-        public async Task<IActionResult> Put(int id, TEntity person)
+        public async Task<IActionResult> Put(int id, TEntity entity)
         {
-            if (id != person.Id)
+            if (id != entity.Id)
             {
                 return BadRequest();
             }
-            await repository.Update(person);
+            await repository.Update(entity);
             return NoContent();
         }
 
         // POST: api/[controller]
         [HttpPost]
-        public async Task<ActionResult<TEntity>> Post(TEntity person)
+        public async Task<ActionResult<TEntity>> Post(TEntity entity)
         {
-            await repository.Add(person);
-            return CreatedAtAction("Get", new { id = person.Id }, person);
+            await repository.Add(entity);
+            return CreatedAtAction("Get", new { id = entity.Id }, entity);
         }
 
         // DELETE: api/[controller]/5
@@ -67,6 +67,14 @@ namespace MovieSystem_MVC_API.Controllers
             }
             return person;
         }
+
+
+        // GET: From TMDB api
+        //[HttpGet]
+        //public async Task<ActionResult<IEnumerable<TEntity>>> Get()
+        //{
+        //    return await repository.GetAll();
+        //}
 
     }
 
