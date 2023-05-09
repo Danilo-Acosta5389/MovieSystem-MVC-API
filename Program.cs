@@ -1,7 +1,9 @@
+global using System.Text.Json.Serialization;
 using Microsoft.EntityFrameworkCore;
 using Microsoft.Extensions.DependencyInjection;
 using MovieSystem_MVC_API.Data.EFCore;
 using System.Net.Http.Headers;
+
 
 namespace MovieSystem_MVC_API
 {
