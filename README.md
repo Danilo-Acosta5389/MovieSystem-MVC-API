@@ -1,7 +1,7 @@
 # MovieSystem-MVC-API
 This is a movie api written in ASP.NET core for storing people, movies, genres and relationships like LikedGenre(which would be more like PersonGenre) and PersonMovie. It connects to a local database (MicrosoftSQLserver) and with help from Entity Framework it creates all the tables necessary for storing all data. It is built using the MVC style architecture and repository pattern (semi, some controllers do not use repository pattern).
 
-NOTE: I made good use of Swagger, wich comes by default on ASP.NET core projects. I have not removed it, it is a great tool for better visual representation of the api and all the calls. You may also note that there are even more calls then the ones i'm listing here, such as POST, PUT and DELETE.
+NOTE: I made good use of Swagger, which comes by default on ASP.NET core projects. I have not removed it, it is a great tool for better visual representation of the api and all the calls. You may also note that there are even more calls then the ones i'm listing here, such as POST, PUT and DELETE.
 
 This was made as a school project.
 
