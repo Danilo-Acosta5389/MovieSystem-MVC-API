@@ -4,7 +4,7 @@
 
 namespace MovieSystem_MVC_API.Migrations
 {
-    public partial class PersonMovie : Migration
+    public partial class migrationNr3 : Migration
     {
         protected override void Up(MigrationBuilder migrationBuilder)
         {

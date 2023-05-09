@@ -68,14 +68,6 @@ namespace MovieSystem_MVC_API.Controllers
             return person;
         }
 
-
-        // GET: From TMDB api
-        //[HttpGet]
-        //public async Task<ActionResult<IEnumerable<TEntity>>> Get()
-        //{
-        //    return await repository.GetAll();
-        //}
-
     }
 
 }

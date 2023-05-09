@@ -4,7 +4,7 @@
 
 namespace MovieSystem_MVC_API.Migrations
 {
-    public partial class LikedGenre : Migration
+    public partial class AddedICollectionType : Migration
     {
         protected override void Up(MigrationBuilder migrationBuilder)
         {

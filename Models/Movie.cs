@@ -1,5 +1,6 @@
 ﻿using MovieSystem_MVC_API.Data;
 using System.ComponentModel.DataAnnotations;
+using System.ComponentModel.DataAnnotations.Schema;
 
 namespace MovieSystem_MVC_API.Models
 {
@@ -9,9 +10,13 @@ namespace MovieSystem_MVC_API.Models
 
         public string Title { get; set; }
 
-        [DataType(DataType.Date)]
-        public DateTime Year { get; set; }
+        public int Year { get; set; }
 
-        public Genre Genre { get; set; } //This creates Foreignkey Genre_GenreId in Db
+        [ForeignKey("Genre")]
+        public int GenreId { get; set; }
+
+        [JsonIgnore]
+        public virtual Genre? Genre { get; set; } //This creates Foreignkey Genre_GenreId in Movie table
+
     }
 }

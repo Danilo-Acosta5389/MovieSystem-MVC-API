@@ -1,4 +1,5 @@
 ﻿using MovieSystem_MVC_API.Data;
+using System.ComponentModel.DataAnnotations.Schema;
 
 namespace MovieSystem_MVC_API.Models
 {
@@ -6,8 +7,18 @@ namespace MovieSystem_MVC_API.Models
     {
         public int Id { get; set; }
 
-        public Genre Genre { get; set; }
+        //public string Name { get; set; }
 
-        public Person Person { get; set; }
+        [ForeignKey("Genre")]
+        public int GenreId { get; set; }
+
+        [JsonIgnore]
+        public Genre? Genre { get; set; }
+
+        [ForeignKey("Person")]
+        public int PersonId { get; set; }
+
+        [JsonIgnore]
+        public Person? Person { get; set; }
     }
 }

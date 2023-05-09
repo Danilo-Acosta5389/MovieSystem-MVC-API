@@ -2,6 +2,7 @@
 using Microsoft.EntityFrameworkCore;
 using Microsoft.EntityFrameworkCore.Infrastructure;
 using Microsoft.EntityFrameworkCore.Metadata;
+using Microsoft.EntityFrameworkCore.Migrations;
 using Microsoft.EntityFrameworkCore.Storage.ValueConversion;
 using MovieSystem_MVC_API.Data.EFCore;
 
@@ -10,9 +11,10 @@ using MovieSystem_MVC_API.Data.EFCore;
 namespace MovieSystem_MVC_API.Migrations
 {
     [DbContext(typeof(MovieSystem_MVC_APIContext))]
-    partial class MovieSystem_MVC_APIContextModelSnapshot : ModelSnapshot
+    [Migration("20230509190120_AddedICollectionType")]
+    partial class AddedICollectionType
     {
-        protected override void BuildModel(ModelBuilder modelBuilder)
+        protected override void BuildTargetModel(ModelBuilder modelBuilder)
         {
 #pragma warning disable 612, 618
             modelBuilder
@@ -163,7 +165,7 @@ namespace MovieSystem_MVC_API.Migrations
             modelBuilder.Entity("MovieSystem_MVC_API.Models.Movie", b =>
                 {
                     b.HasOne("MovieSystem_MVC_API.Models.Genre", "Genre")
-                        .WithMany()
+                        .WithMany("Movies")
                         .HasForeignKey("GenreId")
                         .OnDelete(DeleteBehavior.Cascade)
                         .IsRequired();
@@ -188,6 +190,11 @@ namespace MovieSystem_MVC_API.Migrations
                     b.Navigation("Movie");
 
                     b.Navigation("Person");
+                });
+
+            modelBuilder.Entity("MovieSystem_MVC_API.Models.Genre", b =>
+                {
+                    b.Navigation("Movies");
                 });
 #pragma warning restore 612, 618
         }
